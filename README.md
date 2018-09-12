@@ -5,6 +5,27 @@ This package does not yet contain any implementation.  Just an idea.
 
 ## Summary
 
+The main part of the idea is to have code that runs on Clojure version 1.10 use
+[java.nio.file.Path](https://docs.oracle.com/javase/tutorial/essential/io/fileio.html)
+and friends, and not `java.io.File`.
+
+More specifically, I'd propose to have a package that provides every function
+currently provided by
+[clojure.java.io](https://github.com/clojure/clojure/blob/master/src/clj/clojure/java/io.clj)
+but using Java's `nio` package, not the `io` package.
+
+This could be done with a brand new `clojure.java.nio` package, as a plug-in
+replacement; or by directly re-implementing `clojure.java.io` to change the
+underlying implementation; or as a third-party package, not specifically part
+of the Clojure ecosystem.
+
+The `java.nio` package provides far more than you can get from the existing
+functions in `clojure.java.io`, of course.  It would be nice to expose more
+as part of the standard Clojure language.  But providing replacements for
+the `clojure.java.io` functions is a good start.
+
+## Motivation
+
 There should be a standard, simple, idiomatically Clojure way to access the file
 system.
 
