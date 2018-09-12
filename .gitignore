@@ -5,3 +5,12 @@
 /pom.xml
 /commit.log
 /diff.diff
+pom.xml.asc
+*.jar
+*.class
+/lib/
+/classes/
+/checkouts/
+.lein-deps-sum
+.lein-plugins/
+.cpcache/
