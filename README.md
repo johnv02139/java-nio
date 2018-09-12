@@ -59,10 +59,11 @@ takes advantage of features of Java 8, when present.  The code can do a runtime
 check, and invoke one set of functionality or the other, depending on its
 environment.
 
-In fact, the `fs` project (see below) did just that.  Initially, my idea was to
-develop a "unified" file I/O, that would use, and would be based on, `java.nio`
-as much as possible, by providing implementations of `nio` functionality using
-`java.io.File`.
+In fact, the `fs` project (see below) did just that.  Initially,
+[my idea](https://github.com/johnv02139/clujnio) was to use techniques like the
+one in `fs` to develop a "unified" file I/O, that would use, and would be based
+on, `java.nio` as much as possible, by providing implementations of `nio`
+functionality using `java.io.File`.
 
 But if Clojure 1.10 is going to require Java 8 anyway, any Clojure 1.10 library
 should be able to feel free to assume that `java.nio` is present.
